@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Venituri și Cheltuieli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator Venituri și Cheltuieli</h1>
+        
+        <div class="input-section">
+            <h2>Adaugă Venituri (în lei)</h2>
+            <input type="text" id="venitNume" placeholder="Nume venit">
+            <input type="number" id="venitValoare" placeholder="Valoare venit">
+            <button onclick="adaugaVenit()">Adaugă Venit</button>
+        </div>
+
+        <ul id="listaVenituri" class="lista"></ul>
+
+        <div class="input-section">
+            <h2>Adaugă Cheltuieli (în lei)</h2>
+            <input type="text" id="cheltuieliNume" placeholder="Nume cheltuială">
+            <input type="number" id="cheltuieliValoare" placeholder="Valoare cheltuială">
+            <button onclick="adaugaCheltuiala()">Adaugă Cheltuială</button>
+        </div>
+
+        <ul id="listaCheltuieli" class="lista"></ul>
+
+        <div class="result-section">
+            <h2>Selectează Moneda pentru Total:</h2>
+            <select id="monedaSelectata" onchange="calculeazaTotal()">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+            </select>
+            <h2>Total Luna:</h2>
+            <p id="total">0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
